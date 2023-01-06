@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Nicholas Pye</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="canvas"></div>
+<!-- partial -->
+  
+  <div class="container">
+    
+    <div id="BusinessCard" class="card">
+      
+      <div class="front side">
+        <h1 class="logo">Nicholas Pye</h1>
+      </div>
+      
+      <div class="back side">
+        <h3 class="name">Nicholas Pye</h3>
+        <div>Snr IT Consultant</div>      
+        <div class="info">
+          <p><span class="property">Email: </span><a href="mailto:nick.pye@gmail.com">nick.pye@gmail.com</a></p>
+          <p><span class="property">Twitter: </span><a href="http://www.twitter.com/@npye">@npye</a></p>
+          <p><span class="property">Phone UK: </span>+44 (0) 792 180 1782</p>
+          <p><span class="property">Phone FR: </span>+33 (0) 760 499 333</p>
+          <p><span class="property">LinkedIn: </span><a href="http://www.linkedin.com/in/nick-pye-674b573">Nick Pye</a></p>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+ 
+  <audio id="audioID" loop> 
+    <source src="./Eternal Sapphire.mp3"  type="audio/mp3">
+  </audio>
+    
+
+<script>
+    var audio = document.getElementById("audioID");
+    var BC = document.getElementById("BusinessCard");
+    
+    function play() {
+      audio.play();
+    }
+    
+    function stop() {
+      audio.pause();
+    }
+    
+    BC.addEventListener('click', play);
+    BC.addEventListener('mouseover', play);
+    BC.addEventListener('mouseout', stop);
+  
+</script>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/three.js/r72/three.min.js'></script><script  src="./script.js"></script>
+</body>
+</html>
