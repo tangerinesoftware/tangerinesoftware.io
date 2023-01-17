@@ -1,0 +1,26 @@
+<!DOCTYPE html> 
+<html>
+    <head></head>
+    <body>
+        <div id="data">response goes here!</div>
+        <script >
+            fetch("https://api.bit.io/v2beta/query", {
+            "method": "POST",
+            "headers": {
+                "Content-Type": "application/json",
+                "Authorization": "Bearer v2_3y5gM_JpHWkQaAkwD3zxaWpzxd8Uk"
+            },
+            "body": {
+                "database_name": "tangerinesoftware/Madeleine",
+                "query_string": "SELECT * FROM cles;"
+            }
+            })
+            .then(response => {
+            console.log(response);
+            })
+            .catch(err => {
+            console.error(err);
+            });
+        </script>
+    </body>
+</html>
