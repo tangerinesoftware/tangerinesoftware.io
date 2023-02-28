@@ -19,7 +19,7 @@ body, html, #app {
   width: auto;
   height: calc(2 * var(--lineHeight));
   line-height: var(--lineHeight);
-  margin: calc(50vh - var(--lineHeight)) auto 0;
+  margin: calc(20vh - var(--lineHeight)) auto 0;
   font-size: var(--fontSize);
   text-transform: uppercase;
 }
