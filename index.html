@@ -2,27 +2,60 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>Contact | Nicholas Pye</title>
-  <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&amp;display=swap'>
-  <link rel="stylesheet" href="style.css">
+  <title>Digital Business Card</title>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'><link rel="stylesheet" href="./style.css">
 
 </head>
 <body>
 <!-- partial:index.partial.html -->
-<div id="app">
-  <div id="hero">
-    <h1>Nicholas Pye</h1>
-    <h2>Snr IT Consultant</h2>
-          <p><span class="property">Email: </span><a href="mailto:nick.pye@gmail.com">nick.pye@gmail.com</a></p>
-          <!--<p><span class="property">Twitter: </span><a href="http://www.twitter.com/@npye">@npye</a></p>
-          <p><span class="property">Phone UK: </span>+44 (0) 792 180 1782</p>-->
-          <p><span class="property">Phone FR: </span>+33 (0) 760 499 333</p>
-          <p><span class="property">LinkedIn: </span><a href="http://www.linkedin.com/in/nick-pye-674b573">Nick Pye</a></p>
+<div class="card">
+  <div class="face front center">
+    <header>
+      <h1>
+        <span class="alt">&lt;</span> Nicholas Pye <span class="alt">&gt;</span>
+      </h1>
+    </header>
+    <section>
+      <p>
+        SAP Consultant | Integration | Software Development
+      </p>
+    </section>
+    <footer>
+      <svg id="scene"></svg>
+    </footer>
+  </div>
+  <div class="face back flip center">
+    <header>
+      <h1>
+        <span class="alt">&lt;</span> Nicholas Pye <span class="alt">&gt;</span>
+      </h1>
+    </header>
+    <section>
+      <p>
+        Experience with modern stack technologies
+      </p>
+    </section>
+    <footer>
+      <p>
+        Get in touch
+      </p>
+      <ul class="profiles">
+        <li>
+          <a href="http://www.linkedin.com/in/nick-pye-674b573" target="_blank"><i class="fa fa-linkedin"></i></a>
+        </li>
+        <li>
+          <a href="mailto:nick.pye@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a>
+        </li>
+        <li>
+          <a href="tel:+33 760 499 333" target="_blank"><i class="fa fa-phone"></i></a>
+        </li>
+
+      </ul>
+    </footer>
   </div>
 </div>
 <!-- partial -->
-
-  <script type="module" src="script.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.3.0/snap.svg-min.js'></script><script  src="./script.js"></script>
 
 </body>
 </html>
