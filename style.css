@@ -1,39 +1,99 @@
-body, html, #app {
-  margin: 0;
+@import 'https://fonts.googleapis.com/css?family=Open+Sans|Roboto:300';
+
+html * {
+  box-sizing: border-box;
+}
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+/*body {
+  font-size: 1.15em;
+  font-family: 'Roboto', sans-serif;
+  color: #212121;
+  background-color: #CFD8DC;
+}*/
+h1 {
+  font-size: 4rem;
+  margin: 0.8rem;
+}
+a {
+  color: #03A9F4;
+  text-decoration: none;
+}
+.alt {
+  color: #03A9F4;
+}
+.center {
+  text-align: center;
+}
+.card {
+  font-family: 'Roboto';
+  text-transform: uppercase;
+  font-weight: 300;
+  position: relative;
+  width: 600px;
+  height: 300px;
+  margin: 3rem auto;
+}
+.card .face {
+  position: absolute;
   width: 100%;
   height: 100%;
-}
-
-#app {
   overflow: hidden;
-  touch-action: pan-up;
-  color: #ffffff;
-  font-family: 'Montserrat', sans-serif;
-  text-align: center;
-  text-shadow: 0 0 5px #ffffff, 0 0 20px #000, 0 0 30px #000;
+  background-color: #FFFFFF;
+  border-radius: 0.25rem;
+  box-shadow: 0 2.5em 0.9em -2em #555;
+  backface-visibility: hidden;
+  transition: transform 0.8s cubic-bezier(0.63, -0.32, 0.4, 1.39);
 }
-
-#app h1 {
-  --fontSize: 60px;
-  --lineHeight: 30px;
-  width: auto;
-  height: calc(2 * var(--lineHeight));
-  line-height: var(--lineHeight);
-  margin: calc(20vh - var(--lineHeight)) auto 0;
-  font-size: var(--fontSize);
-  text-transform: uppercase;
+.card .face > header {
+  color: #607D8B;
 }
-
-#app a {
-  margin-top: 10px;
+.card .face > header h1 {
   display: inline-block;
-  text-decoration: none;
-  color: #fff;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #B6B6B6;
 }
-
-#app canvas {
-  display: block;
-  position: fixed;
-  z-index: -1;
-  top: 0;
+.card .face > section p {
+  margin: 1.5rem;
+}
+.card .face > footer svg {
+  width: 600px;
+  height: 100px;
+}
+.card .face.back {
+  transform: rotateY(180deg);
+}
+.card:hover .face.front {
+  transform: rotateY(180deg);
+}
+.card:hover .face.back {
+  transform: rotateY(0deg);
+}
+ul.profiles {
+  list-style-type: none;
+  padding: 0.1rem 0;
+  margin: 1rem 0;
+  font-size: 2.25rem;
+}
+ul.profiles li {
+  display: inline-block;
+}
+ul.profiles li:not(:last-child) {
+  margin-right: 2rem;
 }
